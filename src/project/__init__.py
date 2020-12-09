@@ -16,8 +16,14 @@ bcrypt = Bcrypt()
 
 def register_blueprints(app):
     from project.endpoints.users import blueprint as usuarios
+    from project.endpoints.group import blueprint as grupo
+    from project.endpoints.group import blueprint as aparato
 
+    app.register_blueprint(aparato)
     app.register_blueprint(usuarios)
+    app.register_blueprint(grupo)
+
+
 
 
 def register_error_handler(app):

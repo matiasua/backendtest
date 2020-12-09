@@ -42,7 +42,6 @@ def autenticar (f):
     return wrapper
 
 @blueprint.route('/register', methods=['POST'])
-@blueprint.route('/users', methods=['POST'])
 def register():
     usuario = usuario_schema.load(request.json)
 
@@ -125,7 +124,7 @@ def login():
     #     return 'Not found', 404
 
     payload = {
-        'sub': usuario.id,
+        'sub': usuario.user_id,
         'iat': datetime.datetime.now()
         }
 
