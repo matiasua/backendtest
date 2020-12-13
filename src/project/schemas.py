@@ -11,8 +11,6 @@ class UsuarioSchema(ma.SQLAlchemyAutoSchema):
         load_only = ('password', )
 
 
-usuario_schema = UsuarioSchema()
-
 
 class GruposSchema(ma.SQLAlchemyAutoSchema):
     # user_id = fields.Int()
@@ -20,4 +18,12 @@ class GruposSchema(ma.SQLAlchemyAutoSchema):
         model = Grupos
         load_instance = True
 
+class  AparatosSchema (ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Aparatos
+        load_instance = true
+
+
+usuario_schema = UsuarioSchema()
 grupo_schema = GruposSchema()
+aparatos_schema = AparatosSchema()

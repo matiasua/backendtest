@@ -136,3 +136,4 @@ def login():
 #     usuario = Usuario.query.get_or_404(payload['sub'])
 
 #     return usuario_schema.dump(usuario), 200
+
